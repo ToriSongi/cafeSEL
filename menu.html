@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cafe SEL</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			setInterval(fade,4500);
+			let i=3;
+			function fade(){
+			if(i==0){i=3;
+			$("#back>img").fadeIn(4500);
+			}
+			else{$("#back>img").eq(i).fadeOut(4500);
+			i--;}
+			}
+			
+			
+	
+			
+			
+			});///////end
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:16pt/120% "나눔스퀘어", sans-serif; color:white; background:#0e0e0e;}
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout{width:1300px; margin:auto; position:relative;}
+		
+	
+		
+		header {display:flex; padding:30px 20px; align-items:center;}
+		
+		header div{flex:1; margin-left:50px; display:block; border:0px solid yellow; padding:10px; }
+		header img{width:110px;}
+		header+img {}
+
+		nav{flex:1.3; display:flex; font-family:"Consolas", serif;  padding:0 10px; text-shadow:1px 1px 2px rgba(0,0,0,0.4); border:0px solid yellow;}
+		nav>a{margin:80px 40px 30px 100px; padding-bottom:5px;  }
+		nav>a:nth-child(2){border-bottom:1px solid white;}
+		
+		
+		main{}
+		main>p{text-align:right;}
+		/*main p{text-shadow:1px 1px 2px rgba(0,0,0,0.4);}*/
+		
+		#tap p{top:720px; left:400px; background:url("images/menu_tap.png"); z-index:1; position:absolute; width:900px; padding:10px;}
+		#tap a{font-family:"Consolas", serif; color:black; padding:2px 60px; font-weight:bold; }
+		#tap a:nth-of-type(2){margin-left:58px;}
+		#tap a:nth-of-type(3){margin-left:85px;}
+		
+		#menu{display:flex; margin-top:150px;}
+		#m1{flex:0.1;  color:white; background:#0e0e0e;}
+		#m1>section{padding:40px 30px 10px 30px; line-height:180%;}
+		#m1>section:nth-child(2){margin-top:830px;}
+		#m1>section:nth-child(3){margin-top:2010px;}
+		
+		#m2{flex:1.2;  background:white; color:black; font-weight:bold; padding:50px 80px 100px 0; font-family:"Consolas", serif; line-height:130%; }
+		#coffee{display:flex; }
+		#m2_1{flex:1; padding-left:80px; border:0px solid red;}
+		#m2_1 section{margin-bottom:70px;}
+		#m2_1 p{font-weight:normal;}
+		#m2_2{flex:0.8; padding-top:180px;}
+		.coffee{width:300px;}
+		
+		#bread{font-family:"나눔고딕"}
+		#bread section{display:flex; align-items:center; padding:20px 90px;}
+		#bread input{margin-right:40px;}
+		#bread img{margin-right:100px;}
+		#bread h5 {letter-spacing:0.05em;}
+		
+		#preorder{padding:60px 20px 0 70px;}
+		
+		
+		footer{display:flex; font-size:0.85rem; align-items:center; padding:0px 70px 30px 180px; height:200px; margin-top:100px;}
+		footer img{ width:80px;}
+		footer a{margin:0 40px; }
+		footer a:hover{font-weight:bold;}
+		footer>p{margin-left:110px; flex:1; line-height:30pt;}
+		
+		
+		
+		</style>
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+				<h1><a href="index.html"><img src="images/sel_logo.png" alt="로고화이트"></a></h1>
+				</div>
+				<nav>
+					<a href="about.html">About </a>
+					<a href="menu.html"> Menu</a>
+					<a href="gallery.html">Gallery </a>
+					<a href="notice.html">Notice </a>
+					<a href="review.html">Review </a>
+				</nav>
+			</header>
+			<main>
+				<img src="images/menu_main.jpg" alt="메뉴커피사진">
+				<p>저희 SEL카페의 맛있는 메뉴가 소개되어 있는 공간입니다. 더불어 프리오더도 진행하고 있습니다.</p>
+				<div id="tap">
+					<p>
+						<a href="#coffee">Coffee & Beverage</a>
+						<a href="#bread">Bread</a>
+						<a href="#preorder">Preorder</a>
+					</p>	
+				</div>
+				<div id="menu">
+					<div id="m1">
+						<section>
+							<h3>Coffee & <br>Beverage</h3>
+						</section>
+						<section>
+							<h3>Bread</h3>
+						</section>
+						<section>
+							<h3>Preorder</h3>
+						</section>
+					</div>
+					<div id="m2">
+						<div id="coffee">
+								<div id="m2_1">
+									<section>
+										<h3>Coffee(ice / hot)</h3>
+										<p>Sel Coffee  4.0<br>
+												Espresso	4.0<br>
+												Americano 4.5<br>
+												Cafe Latte 5.0<br>
+												Cappuccino 5.0<br>
+												Cafe Mocha 6.0<br>
+												Caramel Macchiato 6.0<br>
+												Earl Gray Latte 5.5<br>
+												Vanilla Latte 5.5</p>
+									</section>
+									<section>
+										<h3>Tea(ice / hot) </h3>
+										<p>Ice Tea 4.5<br>
+												Earl Gray 4.5<br>
+												Chamomile 4.5<br>
+												Jasmine 4.5<br>
+												Pumpkin 5.0<br>
+												Mariage Freres(premium) 8.0<br>
+												- Marco Polo<br>
+												- Wedding Imperial<br>
+												- Casablanca<br>
+									</section>
+									<section>
+										<h3>Beverage</h3>
+										<p>
+											Lemon Ade 5.0<br>
+											Grapefruit Ade 5.0<br><br>
+
+											Strawberry Smoothie 6.0<br>
+											Mango Smoothie 6.0<br>
+									</section>
+							</div>
+							<div id="m2_2">
+								<img src="images/coffee.png" alt="커피사진2" class="coffee">
+							</div>
+						</div>
+						<div id="bread">
+							<section>
+								<input type="checkbox" id="bread1">
+								<img src="images/bread1.jpg" alt="빵1">
+								<h5>브리오슈 소금빵 &ensp; &ensp;   3.5</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread2"  checked>
+								<img src="images/bread2.jpg" alt="빵2">
+								<h5>브리오슈 먹물 소금빵 &ensp; &ensp;   3.5</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread3">
+								<img src="images/bread3.jpg" alt="빵3">
+								<h5>브리오슈 치즈 소금빵 &ensp; &ensp;   3.8</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread4">
+								<img src="images/bread4.jpg" alt="빵4">
+								<h5>브리오슈 야채 소금빵 &ensp; &ensp;   3.8</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread5">
+								<img src="images/bread5.jpg" alt="빵5">
+								<h5>치아바타 &ensp; &ensp;   3.0</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread6"  checked>
+								<img src="images/bread6.jpg" alt="빵6" >
+								<h5>올리브 치아바타 &ensp; &ensp;   3.5</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread7">
+								<img src="images/bread7.jpg" alt="빵7">
+								<h5>페퍼로니 치아바타  &ensp; &ensp;   3.8</h5>
+							</section>
+							<section>
+								<input type="checkbox" id="bread8" checked>
+								<img src="images/bread8.jpg" alt="빵8">
+								<h5>치즈 깜빠뉴 &ensp; &ensp;   4.0</h5>
+							</section>
+						</div>
+						<div id="preorder">
+							<img src="images/preorder.jpg" alt="프리오더 주문화면">
+						</div>
+					</div>
+				</div>
+			</main>
+			
+			<footer>
+				<img src="images/sel_logo.png" alt="로고화이트">
+				<p>COPYRIGHT ⓒSEL. ALL RIGHTS Reserved. <a href="#">개인정보취급방침  </a>  대표  이재현 <a href="#">Contact Us</a> <br>
+
+				사업자등록번호  201-88-00000       주소   경기 성남시 수정구 위례서일로1길 21-7 1층    &ensp;    전화  031-607-0882 </p>
+			</footer>
+		</div>
+	</body>
+</html>

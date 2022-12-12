@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cafe SEL</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			setInterval(fade,4500);
+			let i=3;
+			function fade(){
+			if(i==0){i=3;
+			$("#back>img").fadeIn(4500);
+			}
+			else{$("#back>img").eq(i).fadeOut(4500);
+			i--;}
+			}
+			
+			$("#custom li").click(function(){
+			const list=$(this).index();
+			$(".popup").eq(list).show();
+			});
+			//공지사항 [닫기]버튼 클릭
+			$(".popup button").click(function(){
+			$(".popup").hide();
+			});
+			
+			
+			$("#write").click(function(){
+				$(".submit").show();
+				$("#rev1").hide();
+			});
+			$(".close").click(function(){
+				$(".submit").hide();
+				$("#rev1").show();
+			});
+			
+			});///////end
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:16pt/120% "나눔스퀘어", sans-serif; color:white; background:#0e0e0e;}
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout{width:1300px; margin:auto; position:relative; }
+		
+	
+		
+		header {display:flex; padding:30px 20px; align-items:center;}
+		
+		header div{flex:1; margin-left:50px; display:block; border:0px solid yellow; padding:10px; }
+		header img{width:110px;}
+		
+
+		nav{flex:1.3; display:flex; font-family:"Consolas", serif;  padding:0 10px; text-shadow:1px 1px 2px rgba(0,0,0,0.4); border:0px solid yellow;}
+		nav>a{margin:80px 40px 30px 100px; padding-bottom:5px;  }
+		nav>a:nth-child(5){border-bottom:1px solid white;}
+		
+		
+		main{}
+		main>p{text-align:right;}
+		
+		
+		#review{display:flex; margin-top:150px;}
+		#review div{flex:0.3}
+		#review section {flex:1.2; background:white; color:black; font-weight:bold; padding:80px 50px 80px 0;}
+		#rev1>p{float:right; color:black; font-size:12pt;}
+		#rev1>p:hover{text-decoration:underline;}
+		
+		#rev1>h2{width:320px; margin-bottom:20px;}
+		#custom{list-style:none; padding:20px 70px 50px 110px; font-size:13pt; }
+	
+		#custom li{line-height:400%; display:flex; align-items:center; }
+		#custom li>img{float:right; width:60px; }
+		#custom li>b{flex:0.4; border:0px solid red; font-weight:bold;}
+		 #custom li>p{flex:1; border:0px solid red; font-weight:normal;}
+		 #custom li>span{flex:0.5; border:0px solid red; text-align:center; }
+		
+		.popup {margin:auto; background:rgba(0,0,0,0.8); position:fixed; top:0; left:0; z-index:1; width:100%; height:100vh; display:none; color:black;}
+		.popup section{ position:absolute; left:35vw; top:60px; background:white; margin:auto; text-align:center; width:500px; height:760px; padding-top:30px; }
+		.popup button{font-size:20pt; border:none; background:none; left:465px; top:705px; font-family:'맑은고딕'; position:absolute; z-index:1; }
+		.popup p{color:black; font-size:13pt}
+		.popup section img {width:280px;}
+		
+		.submit {display:none;}
+		.submit a {color:black; padding:5px 20px; border:1px solid black; margin:12px 5px; float:right; font-size:0.8rem;}
+		.submit a:hover{background:black; color: white;}
+		.submit form{padding:40px 100px;}
+		.submit input{width:280px;}
+		.submit label:last-of-type}{margin-bottom:100px;}
+		
+		footer{display:flex; margin:auto; font-size:0.85rem; align-items:center; padding:0px 70px 30px 180px; height:200px; margin-top:100px;}
+		footer img{width:80px;}
+		footer a{margin:0 40px; }
+		footer a:hover{font-weight:bold;}
+		footer>p{margin-left:110px; flex:1; line-height:30pt;}
+		
+		
+		
+		</style>
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+				<h1><a href="index.html"><img src="images/sel_logo.png" alt="로고화이트"></a></h1>
+				</div>
+				<nav>
+					<a href="about.html">About </a>
+					<a href="menu.html"> Menu</a>
+					<a href="gallery.html">Gallery </a>
+					<a href="notice.html">Notice </a>
+					<a href="review.html">Review </a>
+				</nav>
+			</header>
+			
+			<main>
+				<img src="images/review_main.jpg" alt="리뷰테이블사진">
+				<p>저희 SEL카페를 방문하신 고객님들의 소중한 리뷰가 담겨 있는 공간입니다.</p>
+				<div id="review">
+					<div>
+					</div>
+					<section>
+						<div id="rev1">
+							<h2><img src="images/review_heading.jpg" alt="고객리뷰"></h2>
+							<p id="write">+ 리뷰 작성하기</p><br><br>
+							<ol id="custom">
+								<li><b>아벨라시칠리아님</b><p>깔끔한 분위기 좋아요! 크리스마스 분위기도 좋고</p> <span>2022.11.10</span><img src="images/review_photo1.jpg" alt="고객리뷰사진1"></li>
+								<li><b>맛있게먹냥님</b><p>아니 이렇게 이쁘고 맛있을 일 입니까??</p> <span>2022.11.18</span><img src="images/review_photo2.jpg" alt="고객리뷰사진2"></li>
+								<li><b>서빵님</b><p>분위기 좋고~커피 맛있어요 </p><span>2022.11.08</span><img src="images/review_photo3.jpg" alt="고객리뷰사진3"></li>
+								<li><b>selc님</b><p>신축건물에 들어온 카페라 사람들이 꽤 많았어요  </p>  <span>2022.11.29</span><img src="images/review_photo4.jpg" alt="고객리뷰사진4"></li>
+								<li><b>콩콩이8533님</b><p>친절하심 빵은 데워달라고 요청해야됨</p> <span>2022.11.05</span><img src="images/review_photo5.jpg" alt="고객리뷰사진5"></li>
+								<li><b>뿌잉맘12님</b><p>재방문 의사 100000%입니다.</p> <span>2022.11.26</span><img src="images/review_photo6.jpg" alt="고객리뷰사진6"></li>
+								<li><b>honbb님</b><p>와 진짜 소금빵 찐 맛집!!!! 커피 찐 맛집!!!!!!</p> <span>2022.10.07</span><img src="images/review_photo7.jpg" alt="고객리뷰사진7"></li>
+							</ol>
+						</div>
+						<div class="submit">
+							<a href="#"> + 사진 첨부</a><br>
+							<form action="#">
+							  <label for="editor">작성자:&ensp; &ensp;</label> 
+							  <input type="text"  id="editor"  name="editor"><br><br>
+							  <label for="title">제목: &ensp; &ensp; &ensp;</label>  
+							  <input type="text"  id="title"  name="title"><br><br>
+							<label for="review">내용: </label><br>
+							<textarea id="write" name="review" rows="25" cols="110"></textarea><br>
+								</form>
+							<a href="#" class="close"> 취소하기</a> <a href="#"> 등록하기</a>
+						</div>
+					</section>
+				</div>
+				<div class="popup">
+						<section>
+								<h5>아벨라시칠리아님</h5>
+								<img src="images/review_popup1.jpg" alt="리뷰팝업사진1"><br>
+							<br>
+								<p>아니 이렇게 이쁘고 맛있을 일 입니까??ㅎ<br>
+								우선 브리오슈 햄치즈 샌드위치 먹었는데 너무너무<br>
+								맛있어요 단짠의 조화가 최고!<br>
+								그리고 카푸치노 거품 미쳤어요<br>
+								위례 근처카페 중 제일 보드랍고 고소한 휩을<br>
+								먹는것 같아요 ㅎ 야외좌석 노란색으로 따듯하고<br>
+								음악 캐롤나와요 ㅎ 맛과 동시에 연말분위기<br>
+								느끼고 싶으시면 꼭 방문해보세요</p>
+								<button type="button">X</button>
+						</section>
+				</div>
+				<div class="popup">
+						<section>
+							<h5>맛있게먹냥님</h5>
+							<img src="images/review_popup2.jpg" alt="리뷰팝업사진2"><br>
+							<br>
+							<p>깔끔한 분위기 좋아요! <br>
+								크리스마스 분위기도 좋고 <br>
+								음악도 인테리어도 최고예요.<br>
+								소금빵은 약간 제 입맛엔 좀...<br> 안맞았지만 좋아요.</p>
+							<button type="button">X</button>
+						</section>	
+				</div>
+				<div class="popup">
+						<section>
+								<h5>서빵님</h5>
+								<img src="images/review_popup3.jpg" alt="리뷰팝업사진3"><br>
+								<br>
+								<p>분위기 좋고~커피 맛있어요.<br>
+										근데 좌석이..ㅠㅠ<br>
+										주말엔 자리 선점하기 어렵지만 <br>
+										빵이 너무 맛있고, 분위기가 좋아요^___^<br>
+										트리도 너무 예쁩니다. </p>
+								<button type="button">X</button>
+							</section>
+					</div>
+					<div class="popup">
+							<section>
+									<h4>selc님</h4>
+									<img src="images/review_popup4.jpg" alt="리뷰팝업사진4"><br>
+									<br>
+									<p>
+									신축건물에 들어온 카페라 사람들이 꽤 많았어요. <br>
+										친절하시고 실내 디자인이 근사했어요. <br>소금빵류도 다양하고 <br>
+										위례에서 인테리어로는 제일 이쁜듯해요.<br>
+										위례에서 색다른 디자인 카페를 찾는분 <br>
+										크리스마스 트리도 장식이 잘 되어 있어서<br> 커플들이 오면 사진스폿으로 추천해요.</p>
+									<button type="button">X</button>
+							</section>
+					</div>	
+					<div class="popup">
+							<section>
+									<h5>콩콩이8533님</h5>
+									<img src="images/review_popup5.jpg" alt="리뷰팝업사진5"><br>
+									<br>
+									<p>직원 분들도 친절하시고 <br>
+										커피도 괜찮고<br>
+										빵도 맛있어요.<br>
+										빵은 데워달라고 요청해야 합니다.</p>
+									<button type="button">X</button>
+							</section>
+					</div>	
+					<div class="popup">
+								<section>
+									<h5>뿌잉맘12님</h5>
+									<img src="images/review_popup6.jpg" alt="리뷰팝업사진6"><br>
+									<br>
+									<p>테이크아웃 포장에 스티커 붙혀주셔서  <br>
+											편하게 들고 오기 좋았고 <br>
+											직원분들 세심한 배려 좋았어요. <br>
+											빵은 맛있어서 추가로 더 사왔어요. <br>
+											재방문 의사 100000%입니다.</p>
+									<button type="button">X</button>
+							</section>
+					</div>	
+					<div class="popup">
+							<section>
+									<h4>honbb님</h4>
+									<img src="images/review_popup7.jpg" alt="리뷰팝업사진7"><br>
+									<br>
+									<p>와 진짜 소금빵 찐 맛집!!!!! <br>
+											커피 찐 맛집!!!!!! <br>
+											매일매일와서 소금빵 출석체크하고  <br>
+											싶을정도로 맛있어요!!!!! <br>
+											커피도 맛나공 최고예요!! <br>
+											인테리어도 넘 예쁘고 인스타갬성 충만 <br>
+											카페 찾아왔는데 최고네용 <br>
+											인수타 업로드해야게써요~~~</p>
+									<button type="button">X</button>
+							</section>
+					</div>
+			</main>
+			
+			<footer>
+				<img src="images/sel_logo.png" alt="로고화이트">
+				<p>COPYRIGHT ⓒSEL. ALL RIGHTS Reserved. <a href="#">개인정보취급방침  </a>  대표  이재현 <a href="#">Contact Us</a> <br>
+
+				사업자등록번호  201-88-00000       주소   경기 성남시 수정구 위례서일로1길 21-7 1층    &ensp;    전화  031-607-0882 </p>
+			</footer>
+		</div>
+	</body>
+</html>

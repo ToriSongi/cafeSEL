@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cafe SEL</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			setInterval(fade,3100);
+			let i=4;
+			function fade(){
+			if(i==0){
+			$("#back>img").fadeIn(1500);
+			i=4;}
+			else{$("#back>img").eq(i).fadeOut(1500);
+			i--;}
+			}
+			
+			
+	
+			
+			
+			});///////end
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:16pt/120% "나눔고딕", sans-serif; color:white; background:#0e0e0e;}
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout{width:1300px; margin:auto; position:relative;}
+		
+		#back {}
+		#back img{position:absolute; top:0; left:0;}
+		
+		header {display:flex; position:absolute; z-index:1; padding:30px 80px;}
+		header h1{flex:1; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,0.2); padding:21px; text-align:center;}
+		header h1>img {}
+		nav{display:flex; font-family:"Consolas", serif;   padding-left:120px; text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
+		nav>a{padding:20px; margin:80px 80px 50px 0;}
+		
+		main{position:absolute; z-index:2; top:730px; font-size:12pt;}
+		main p{text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
+		
+		#blank {height:940px; }
+		
+		
+		
+		footer{display:flex; font-size:0.6rem; align-items:center; padding:0px 70px 30px 180px;}
+		footer img{padding:15px; width:90px;}
+		footer a{margin:0 20px;}
+		footer a:hover{font-weight:bold;}
+		p{margin-left:90px; flex:1; line-height:30pt;}
+		
+		
+		
+		</style>
+	</head>
+	<body>
+		<div id="layout">
+			<div id="back">
+				<img src="images/back5.jpg" alt="배경사진5">
+				<img src="images/back4.jpg" alt="배경사진4">
+				<img src="images/back3.jpg" alt="배경사진3">
+				<img src="images/back2.jpg" alt="배경사진2">
+				<img src="images/back1.jpg" alt="배경사진1">
+			</div>
+			<header>
+				<h1><a href="index.html"><img src="images/sel_logo_black.png" alt="로고블랙"></a></h1>
+				<nav>
+					<a href="about.html">About </a>
+					<a href="menu.html"> Menu</a>
+					<a href="gallery.html">Gallery </a>
+					<a href="notice.html">Notice </a>
+					<a href="notice.html">Review</a>
+				</nav>
+			</header>
+			<main>
+				<p>21-7, Wiryeseoil-ro 1-gil, Sung-nam.</p>
+				<p>Mon ~ Sat   8 : 00 am - 8 : 00 pm (last order 7 : 30 pm)</p>
+			</main>
+			<div id="blank"></div>
+			<footer>
+				<img src="images/sel_logo.png" alt="로고화이트">
+				<p>COPYRIGHT ⓒSEL. ALL RIGHTS Reserved. <a href="#">개인정보취급방침  </a>  대표  이재현 <a href="#">Contact Us</a> <br>
+
+				사업자등록번호  201-88-00000       주소   경기 성남시 수정구 위례서일로1길 21-7 1층        전화  031-607-0882 </p>
+			</footer>
+		</div>
+	</body>
+</html>
